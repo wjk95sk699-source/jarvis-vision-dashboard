@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JARVIS Command Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hud-bg"></div>
+    <div class="scanlines"></div>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <span class="brand-dot"></span>
+          <div>
+            <div class="brand-label">STARK INDUSTRIES</div>
+            <div class="brand-name">JARVIS // COMMAND CONSOLE</div>
+          </div>
+        </div>
+
+        <div class="status-cluster">
+          <div class="tiny-status">
+            <span class="status-led online"></span>
+            <span>ONLINE</span>
+          </div>
+          <div class="tiny-status">
+            <span class="status-led active"></span>
+            <span>CORE LINK</span>
+          </div>
+          <div class="clock-box" id="clock">--:--:--</div>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="hero panel glow">
+          <div class="hero-copy">
+            <div class="eyebrow">SYSTEM STATUS</div>
+            <h1>Mission control is fully operational.</h1>
+            <p>
+              Intelligence synthesis active. All critical systems are online and ready for
+              tactical review.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <button class="primary-btn" id="voiceButton">ACTIVATE VOICE</button>
+            <button class="secondary-btn" id="scanButton">SCAN ENVIRONMENT</button>
+          </div>
+        </section>
+
+        <section class="metrics-grid">
+          <article class="panel metric">
+            <div class="metric-header">
+              <span class="metric-label">PROCESSOR</span>
+              <span class="metric-value">98%</span>
+            </div>
+            <div class="metric-bar"><span style="width: 98%"></span></div>
+          </article>
+
+          <article class="panel metric">
+            <div class="metric-header">
+              <span class="metric-label">POWER</span>
+              <span class="metric-value">86%</span>
+            </div>
+            <div class="metric-bar"><span style="width: 86%"></span></div>
+          </article>
+
+          <article class="panel metric">
+            <div class="metric-header">
+              <span class="metric-label">NETWORK</span>
+              <span class="metric-value">94%</span>
+            </div>
+            <div class="metric-bar"><span style="width: 94%"></span></div>
+          </article>
+
+          <article class="panel metric">
+            <div class="metric-header">
+              <span class="metric-label">VISION</span>
+              <span class="metric-value">88%</span>
+            </div>
+            <div class="metric-bar"><span style="width: 88%"></span></div>
+          </article>
+        </section>
+
+        <section class="data-grid">
+          <article class="panel module">
+            <div class="module-header">
+              <span>INTEL</span>
+              <span class="module-tag">LIVE</span>
+            </div>
+            <ul class="log-list">
+              <li>Flight path stabilized.</li>
+              <li>Object tracking lock acquired.</li>
+              <li>Threat matrix reviewed.</li>
+              <li>Urban scan complete.</li>
+            </ul>
+          </article>
+
+          <article class="panel module">
+            <div class="module-header">
+              <span>ACTIVE TARGETS</span>
+              <span class="module-tag">4</span>
+            </div>
+            <div class="target-row">
+              <span class="target-name">Alpha</span>
+              <span class="target-status green">TRACKING</span>
+            </div>
+            <div class="target-row">
+              <span class="target-name">Bravo</span>
+              <span class="target-status amber">OBSERVE</span>
+            </div>
+            <div class="target-row">
+              <span class="target-name">Charlie</span>
+              <span class="target-status blue">MONITOR</span>
+            </div>
+            <div class="target-row">
+              <span class="target-name">Delta</span>
+              <span class="target-status red">ALERT</span>
+            </div>
+          </article>
+
+          <article class="panel module command-panel">
+            <div class="module-header">
+              <span>VOICE COMMANDS</span>
+              <span class="module-tag">READY</span>
+            </div>
+
+            <div class="command-input-wrap">
+              <input id="commandInput" type="text" placeholder="Say or type a command..." />
+              <button id="submitCommand">SEND</button>
+            </div>
+
+            <div class="suggestions">
+              <button>Open security feed</button>
+              <button>Scan city</button>
+              <button>Summarize status</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="panel system-panel">
+            <div class="module-header">
+              <span>SYSTEM CORE</span>
+              <span class="module-tag">HEALTHY</span>
+            </div>
+
+            <div class="system-list">
+              <div><span>Core AI</span><strong>STABLE</strong></div>
+              <div><span>Propulsion</span><strong>READY</strong></div>
+              <div><span>Shielding</span><strong>ONLINE</strong></div>
+              <div><span>Power Grid</span><strong>OPTIMAL</strong></div>
+            </div>
+          </article>
+
+          <article class="panel output-panel">
+            <div class="module-header">
+              <span>ASSISTANT OUTPUT</span>
+              <span class="module-tag">LIVE</span>
+            </div>
+            <div id="assistantOutput" class="assistant-output">
+              "All systems nominal. Awaiting instruction."
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+																																																																																																																																																																																																																																																																
